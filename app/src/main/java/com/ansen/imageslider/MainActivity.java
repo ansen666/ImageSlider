@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         for(String name : urlMaps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
+
             textSliderView
-                    .description(name)//描述
+//                    .description(name)//描述
                     .image(urlMaps.get(name))//image方法可以传入图片url、资源id、File
                     .setScaleType(BaseSliderView.ScaleType.Fit)//图片缩放类型
                     .setOnSliderClickListener(onSliderClickListener);//图片点击
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);//滑动动画
 //        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);//默认指示器样式
         mDemoSlider.setCustomIndicator((PagerIndicator)findViewById(R.id.custom_indicator2));//自定义指示器
-        mDemoSlider.setCustomAnimation(new DescriptionAnimation());//设置图片描述显示动画
+//        mDemoSlider.setCustomAnimation(new DescriptionAnimation());//设置图片描述显示动画
         mDemoSlider.setDuration(4000);//设置滚动时间，也是计时器时间
         mDemoSlider.addOnPageChangeListener(onPageChangeListener);
     }
