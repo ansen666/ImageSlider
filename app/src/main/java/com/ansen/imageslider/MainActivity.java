@@ -1,9 +1,10 @@
 package com.ansen.imageslider;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDemoSlider = (SliderLayout)findViewById(R.id.slider);
+        mDemoSlider = findViewById(R.id.slider);
 
         HashMap<String,String> urlMaps = new HashMap<>();
         urlMaps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
@@ -31,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(String name : urlMaps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
-
             textSliderView
-//                    .description(name)//描述
                     .image(urlMaps.get(name))//image方法可以传入图片url、资源id、File
                     .setScaleType(BaseSliderView.ScaleType.Fit)//图片缩放类型
                     .setOnSliderClickListener(onSliderClickListener);//图片点击

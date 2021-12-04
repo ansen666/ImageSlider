@@ -3,13 +3,14 @@ package com.daimajia.slider.library;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Message;
-import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.RelativeLayout;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.daimajia.slider.library.Animations.BaseAnimationInterface;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -187,7 +188,7 @@ public class SliderLayout extends RelativeLayout{
         mSliderAdapter = new SliderAdapter(mContext);
         PagerAdapter wrappedAdapter = new InfinitePagerAdapter(mSliderAdapter);
 
-        mViewPager = (InfiniteViewPager)findViewById(R.id.daimajia_slider_viewpager);
+        mViewPager =findViewById(R.id.daimajia_slider_viewpager);
         mViewPager.setAdapter(wrappedAdapter);
 
         mViewPager.setOnTouchListener(new OnTouchListener() {

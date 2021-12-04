@@ -7,11 +7,12 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
-import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.daimajia.slider.library.R;
 import com.daimajia.slider.library.Tricks.InfinitePagerAdapter;
